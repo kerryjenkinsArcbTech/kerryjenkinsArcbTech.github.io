@@ -10,44 +10,46 @@
   	<p style="font-size: 30px">Choose platform location:</p>
 		<table style="background-color: black" width="100%">
 			<tr>
-				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot();"> </td>
-				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot();"> </td>
-				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot();"> </td>
-				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot();"> </td>
-				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot();"> </td>
-				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot();"> </td>
+				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot('slot13');" id=slot13> </td>
+				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot('slot15');" id=slot15> </td>
+				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot('slot17');" id=slot17> </td>
+				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot('slot19');" id=slot19> </td>
+				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot('slot21');" id=slot21> </td>
+				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot('slot23');" id=slot23> </td>
 			</tr>
 			<tr>
-				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot();"> </td>
-				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot();"> </td>
-				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot();"> </td>
-				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot();"> </td>
-				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot();"> </td>
-				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot();"> </td>
+				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot('slot14');" id=slot14> </td>
+				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot('slot16');" id=slot16> </td>
+				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot('slot18');" id=slot18> </td>
+				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot('slot20');" id=slot20> </td>
+				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot('slot22');" id=slot22> </td>
+				<td style="background-color: orange" width="16%" height="60px" onclick="pickSpot('slot24');" id=slot24> </td>
 			</tr>
 
 		</table>
 		<br><br><br><br>
 		<table width="100%" style="background-color: black">
 			<tr>
-				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot();"> </td>
-				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot();"> </td>
-				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot();"> </td>
-				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot();"> </td>
-				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot();"> </td>
-				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot();"> </td>
+				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot('slot1');" id=slot1> </td>
+				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot('slot3');" id=slot3> </td>
+				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot('slot5');" id=slot5> </td>
+				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot('slot7');" id=slot7> </td>
+				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot('slot9');" id=slot9> </td>
+				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot('slot11');" id=slot11> </td>
 			</tr>
 			<tr>
-				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot();"> </td>
-				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot();"> </td>
-				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot();"> </td>
-				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot();"> </td>
-				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot();"> </td>
-				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot();"> </td>
+				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot('slot2');" id=slot2> </td>
+				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot('slot4');" id=slot4> </td>
+				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot('slot6');" id=slot6> </td>
+				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot('slot8');" id=slot8> </td>
+				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot('slot10');" id=slot10> </td>
+				<td style="background-color: white" width="16%" height="60px" onclick="pickSpot('slot12');" id=slot12> </td>
 			</tr>
 		</table>
 		<script>
-			function pickSpot() {
+			async function pickSpot(slot) {
+				document.getElementById(slot).style.backgroundColor = 'black';
+				await new Promise(r => setTimeout(r, 3000));
   			window.location="/index.html";
 			}
 		</script>
